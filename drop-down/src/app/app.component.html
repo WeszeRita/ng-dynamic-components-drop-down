@@ -1,0 +1,8 @@
+<h1>drop down</h1>
+<div [dropdownTriggerFor]="dropdown" class="button">Open dropdown &#9662;</div>
+
+<my-dropdown #dropdown>
+  <ng-container *ngFor="let option of options">
+    <div class="dropdown-item" (click)="test(option)">{{ option | titlecase }}</div>
+  </ng-container>
+</my-dropdown>
